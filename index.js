@@ -1,5 +1,6 @@
-// index.js
-// Basic interactivity for portfolio
+const VERSION = '1.0.0';
+const vEl = document.getElementById('siteVersion');
+if (vEl) vEl.textContent = 'v' + VERSION;
 
 // back to top button behavior
 const backBtn = document.getElementById('backToTop');
