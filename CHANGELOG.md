@@ -14,7 +14,17 @@ All notable changes to this project are documented here. Follow semantic version
 - Added back-to-top button and smooth scroll with nav highlight
 - Prepared dist/ and dist.zip for deployment; added deploy README
 
-## [Unreleased]
+## [1.1.0] - 2026-03-06
 - Added visible version indicator in footer with link to changelog
 - Defined VERSION constant in index.js and rendered to #siteVersion
 - Synced dist and dist.zip to include version badge for deployment
+- Hide entire header on scroll; reveal only on hover for distraction-free reading
+- Added top hover zone (120px) to easily reveal header/nav when hidden
+- Stabilized interactions with a temporary reveal lock to prevent flicker during clicks
+- Ensured nav links and buttons remain clickable while header is visible
+- Justified article paragraph text for improved readability
+- Improved footer readability in dark mode using theme variables; links inherit text color
+- Updated index.html with headerHoverZone element
+
+## [Unreleased]
+No changes yet.

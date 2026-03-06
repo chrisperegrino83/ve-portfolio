@@ -1,4 +1,4 @@
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 const vEl = document.getElementById('siteVersion');
 if (vEl) vEl.textContent = 'v' + VERSION;
 
@@ -15,6 +15,45 @@ backBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+const headerEl = document.querySelector('header');
+let lastScrollY = window.scrollY;
+const hideThreshold = 10;
+window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (!document.body.classList.contains('header-reveal')) {
+        if (y > lastScrollY + hideThreshold) {
+            if (headerEl) headerEl.classList.add('nav-hidden');
+            document.body.classList.add('header-hidden');
+        } else if (y < lastScrollY - hideThreshold || y < 50) {
+            if (headerEl) headerEl.classList.remove('nav-hidden');
+        }
+    }
+    lastScrollY = y;
+});
+
+const hoverZone = document.getElementById('headerHoverZone');
+let revealTimer = null;
+function setReveal(on) {
+    if (revealTimer) {
+        clearTimeout(revealTimer);
+        revealTimer = null;
+    }
+    if (on) {
+        document.body.classList.add('header-reveal');
+    } else {
+        revealTimer = setTimeout(() => {
+            document.body.classList.remove('header-reveal');
+        }, 150);
+    }
+}
+if (hoverZone) {
+    hoverZone.addEventListener('mouseenter', () => setReveal(true));
+    hoverZone.addEventListener('mouseleave', () => setReveal(false));
+}
+if (headerEl) {
+    headerEl.addEventListener('mouseenter', () => setReveal(true));
+    headerEl.addEventListener('mouseleave', () => setReveal(false));
+}
 // highlight nav link for current section
 const sections = document.querySelectorAll('main section');
 const navLinks = document.querySelectorAll('header nav a');

@@ -1,48 +1,38 @@
-# VE Portfolio (Static Site)
+# VE Portfolio
 
-Simple static HTML/CSS/JS portfolio for Values Education. Upload the contents of this folder as the site root.
+A simple, single-page portfolio for Values Education with smooth navigation, light/dark theme, and an optional background image switcher. Built with plain HTML/CSS/JS.
 
-## Structure
-- index.html — main page
-- styles.css — styles
-- index.js — interactivity (theme toggle, background cycling, smooth scroll)
-- project-pic/ — content images
-- background-images/ — bg1.png … bg10.png for background cycling
+## Features
+- Sticky header that hides on scroll to focus on reading
+- Header reveal on hover with a top hover zone for easy access
+- Stable interaction: header stays visible while hovering/clicking
+- Dynamic nav highlight and smooth section scrolling
+- Light/Dark mode toggle with preference saved to localStorage
+- Background image switcher (up to 10 images) with preload and persistence
+- Translucent, readable sections (works in both light/dark modes)
+- Back-to-top button
+- Visible version indicator in the footer with link to changelog
 
-## Quick Start
-- Open index.html locally to preview.
+## Usage
+- Hover at the top of the page or over the header to reveal it when hidden.
+- Click nav links to smoothly jump to sections; the heading briefly highlights.
+- Toggle the theme with the moon button; preference is remembered.
+- Cycle background images with the picture button if images are configured.
 
-## Deploy to Netlify (drag‑and‑drop)
-1. Go to https://app.netlify.com/ and sign in.
-2. Sites → Add new site → Deploy manually.
-3. Drag this folder (dist) or upload a ZIP of its contents.
-4. Rename the site under Site settings → General → Site name.
+## Configure Background Images
+- In `index.html`, the button with `id="bgNext"` has a `data-bg-images` attribute.
+- Provide comma-separated image paths (PNG/JPG/WEBP, up to 10).
+- Example: `data-bg-images="background-images/bg1.png, background-images/bg2.png, ..."`
+- Images are validated and preloaded; invalid paths are skipped.
+- The current index is saved in localStorage (`bgIndex`).
 
-## Deploy to GitHub Pages (repo root)
-1. Create a new GitHub repo.
-2. Upload the contents of this folder (files and subfolders) to the repo root.
-3. Settings → Pages → Source: main branch, folder: / (root).
-4. Open the generated Pages URL.
+## Accessibility
+- Buttons and controls include `title` and `aria-label` for clarity.
+- Sections use consistent contrast and support dark mode.
 
-## Embed in Google Sites
-- Insert → Embed → URL → paste your hosted site URL.
+## Deployment
+- Host the contents of this folder using any static hosting (Netlify, GitHub Pages).
+- Ensure the `background-images/` and `project-pic/` folders are uploaded alongside HTML/CSS/JS.
 
-## Notes
-- Paths are lowercase and hyphenated; case sensitivity matters on hosts.
-- All assets load via relative paths and work over HTTPS.
-
-## Version and Changelog
-- The footer shows the current version and links to the changelog.
-- To update the version, edit VERSION in index.js and add a changelog entry.
-- Changelog URL: https://github.com/chrisperegrino83/ve-portfolio/blob/main/CHANGELOG.md
-
-## Releases and Tags
-- GitHub Releases: draft a release with tag (e.g., v1.0.1) targeting main.
-- Git CLI (optional):
-  - `git tag -a v1.0.1 -m "Release notes"`
-  - `git push origin v1.0.1`
-
-## Troubleshooting
-- 404 images: ensure project-pic/ and background-images/ exist at the site root.
-- Mixed content: keep everything served via HTTPS.
-- Case sensitivity: folder/file names must match exactly what index.html references.
+## Changelog
+- See [CHANGELOG.md](CHANGELOG.md) for detailed changes.

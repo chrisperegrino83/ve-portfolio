@@ -22,6 +22,8 @@ html {
     --header-text: #fff;
     --link-hover-bg: rgba(255,255,255,0.2);
     --nav-active-bg: rgba(255,255,255,0.3);
+    --footer-bg: #eee;
+    --footer-text: #333;
 }
 
 body.dark-mode {
@@ -36,6 +38,8 @@ body.dark-mode {
     --header-text: #fff;
     --link-hover-bg: rgba(255,255,255,0.1);
     --nav-active-bg: rgba(255,255,255,0.2);
+    --footer-bg: #222;
+    --footer-text: #eee;
 }
 
 body {
@@ -54,6 +58,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: transform 0.3s ease, padding 0.3s ease;
 }
 
 header h1 {
@@ -66,6 +71,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 nav a,
@@ -172,6 +178,10 @@ section h2 {
     border-radius: 4px;
 }
 
+.project p {
+    text-align: justify;
+}
+
 .intro-text {
     text-align: center;
     margin: 15px 0;
@@ -195,7 +205,8 @@ section h2 {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #eee;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     margin-top: 20px;
     font-size: 0.9rem;
 }
@@ -203,6 +214,82 @@ footer {
 footer p {
     display: inline-block;
     margin: 0 8px;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+header.nav-hidden nav {
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.header-hidden header {
+    transform: translateY(calc(-100% + 12px));
+}
+header:hover {
+    transform: translateY(0);
+}
+body.header-hidden header nav {
+    opacity: 0;
+    pointer-events: none;
+}
+header:hover nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#headerHoverZone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    z-index: 999;
+}
+#headerHoverZone:hover + header {
+    transform: translateY(0);
+}
+#headerHoverZone:hover + header nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+/* lock header open while interacting */
+body.header-reveal header {
+    transform: translateY(0);
+}
+body.header-reveal header nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+#headerHoverZone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    z-index: 999;
+}
+#headerHoverZone:hover + header {
+    transform: translateY(0);
+}
+#headerHoverZone:hover + header nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ensure nav interactivity wins when header is hovered even in hidden state */
+body.header-hidden header:hover nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* back to top button */
