@@ -30,3 +30,19 @@ Simple static HTML/CSS/JS portfolio for Values Education. Upload the contents of
 ## Notes
 - Paths are lowercase and hyphenated; case sensitivity matters on hosts.
 - All assets load via relative paths and work over HTTPS.
+
+## Version and Changelog
+- The footer shows the current version and links to the changelog.
+- To update the version, edit VERSION in index.js and add a changelog entry.
+- Changelog URL: https://github.com/chrisperegrino83/ve-portfolio/blob/main/CHANGELOG.md
+
+## Releases and Tags
+- GitHub Releases: draft a release with tag (e.g., v1.0.1) targeting main.
+- Git CLI (optional):
+  - `git tag -a v1.0.1 -m "Release notes"`
+  - `git push origin v1.0.1`
+
+## Troubleshooting
+- 404 images: ensure project-pic/ and background-images/ exist at the site root.
+- Mixed content: keep everything served via HTTPS.
+- Case sensitivity: folder/file names must match exactly what index.html references.
