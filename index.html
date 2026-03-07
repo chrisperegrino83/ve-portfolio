@@ -105,15 +105,40 @@
                 <p>Ang pagbuo ng portfoliong ito para sa Values Education ay hindi lamang naging isang simpleng gawain sa paaralan, kundi naging isang malalim na paglalakbay ng aking sarili. Sa pamamagitan ng mga tulong ng aking kaibigan, pakikipag-usap ko sa ating Purok Chairperson, sa mga nakatatanda, at sa mga kapwa ko mag-aaral, natutunan ko na ang tunay na edukasyon ay matatagpuan sa labas ng apat na sulok ng silid-aralan. Natutunan ko na ang bawat tao, anuman ang kanilang edad o katayuan sa buhay, ay may dalang kwento at aral na maaari nating kapulutan ng inspirasyon. Napagtanto ko rin na ang pagtulong at pakikipagkapwa-tao ay hindi nangangailangan ng malaking halaga; sapat na ang tapat na puso, pakikinig, at malasakit upang makagawa ng positibong pagbabago sa ating komunidad. Ang proyektong ito ang nagmulat sa akin na bilang isang mag-aaral ng Grade 8, ako ay may boses at kakayahang maging bahagi ng pag-unlad ng ating lipunan.</p>
                 </article>
         </section>
-    </main>
 
-    <footer>
+        <!-- Main Contact Section -->
+<section id="site-contact-area">
+    <div class="contact-card">
+        <h2>Send a Message</h2>
+        <!-- Using Formspree as the engine to deliver to your Gmail -->
+        <form id="contact-form" action="https://formspree.io/f/xojkqolj" method="POST">
+            <div class="input-group">
+                <label for="user_name">Name</label>
+                <input type="text" id="user_name" name="name" placeholder="Juan Dela Cruz" required>
+            </div>
+            <div class="input-group">
+                <label for="user_email">Email</label>
+                <input type="email" id="user_email" name="email" placeholder="juan@email.com" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="How can I help you today?" required></textarea>
+            </div>
+            <!-- Anti-Spam Honeypot (Hidden from humans) -->
+            <input type="text" name="_gotcha" style="display:none">
+            
+            <button type="submit" id="submit-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+</main>
+    <!-- Footer with Secure Link -->
+    <footer id="site-footer">
         <p>&copy; 2026 Sir Chris</p>
-        <p><a href="https://facebook.com/sirchrisperegrino" target="_blank">My Facebook</a></p>
         <p>Version: <span id="siteVersion">v1.1.0</span> • <a href="https://github.com/chrisperegrino83/ve-portfolio/blob/main/CHANGELOG.md" target="_blank">Changelog</a></p>
+        <p>Preferred method? <a href="#" id="secure-email-link">Show My Email Address</a></p>
     </footer>
-
-    <!-- back to top button -->
+        <!-- back to top button -->
     <button id="backToTop" title="Back to top">↑</button>
     <script src="index.js"></script>
 </body>
