@@ -26,5 +26,5 @@ All notable changes to this project are documented here. Follow semantic version
 - Improved footer readability in dark mode using theme variables; links inherit text color
 - Updated index.html with headerHoverZone element
 
-## [Unreleased]
-No changes yet.
+## [1.2.0] - 2026-03-07
+- Change in contact information from Facebook to Email
