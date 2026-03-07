@@ -27,4 +27,4 @@ All notable changes to this project are documented here. Follow semantic version
 - Updated index.html with headerHoverZone element
 
 ## [1.2.0] - 2026-03-07
-- Change in contact information from Facebook to Email
+- Added a contact form to message the developer through an email.
