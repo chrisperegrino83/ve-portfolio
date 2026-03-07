@@ -350,7 +350,7 @@ body.header-hidden header:hover nav {
     padding: 40px;
     border-radius: 20px;
     box-shadow: none; /* 0 15px 35px rgba(0,0,0,0.05); */
-    max-width: 450px;
+    max-width: 550px;
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
 }
@@ -394,5 +394,6 @@ body.header-hidden header:hover nav {
     background: #4f46e5;
     transform: translateY(-2px);
 }
+
 
 
