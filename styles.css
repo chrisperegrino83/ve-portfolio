@@ -337,3 +337,60 @@ body.header-hidden header:hover nav {
     margin: 0 auto;
     border-radius: 50%;
 }
+
+#site-contact-area {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#site-contact-area .contact-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+}
+
+#site-contact-area h2 { color: #1a1a1a; margin-bottom: 25px; }
+
+#site-contact-area .input-group { margin-bottom: 20px; text-align: left; }
+
+#site-contact-area label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: #666; }
+
+#site-contact-area input, 
+#site-contact-area textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #edf2f7;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#site-contact-area input:focus, 
+#site-contact-area textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    background: #fff;
+}
+
+#site-contact-area button {
+    background: #6366f1;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+#site-contact-area button:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
