@@ -355,7 +355,7 @@ body.header-hidden header:hover nav {
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
 }
 
-#site-contact-area h2 { color: #1a1a1a; margin-bottom: 25px; }
+#site-contact-area h2 { color: #6366f1; margin-bottom: 25px; }
 
 #site-contact-area .input-group { margin-bottom: 20px; text-align: left; }
 
@@ -394,4 +394,5 @@ body.header-hidden header:hover nav {
     background: #4f46e5;
     transform: translateY(-2px);
 }
+
 
