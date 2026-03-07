@@ -346,13 +346,13 @@ body.header-hidden header:hover nav {
 }
 
 #site-contact-area .contact-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.2); /* 20% white opacity */
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    box-shadow: none; /* 0 15px 35px rgba(0,0,0,0.05); */
     max-width: 450px;
     width: 100%;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
 }
 
 #site-contact-area h2 { color: #1a1a1a; margin-bottom: 25px; }
@@ -394,3 +394,4 @@ body.header-hidden header:hover nav {
     background: #4f46e5;
     transform: translateY(-2px);
 }
+
