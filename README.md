@@ -3,6 +3,7 @@
 A simple, single-page portfolio for Values Education with smooth navigation, light/dark theme, and an optional background image switcher. Built with plain HTML/CSS/JS.
 
 ## Features
+- Added contact email information
 - Sticky header that hides on scroll to focus on reading
 - Header reveal on hover with a top hover zone for easy access
 - Stable interaction: header stays visible while hovering/clicking
@@ -35,4 +36,4 @@ A simple, single-page portfolio for Values Education with smooth navigation, lig
 - Ensure the `background-images/` and `project-pic/` folders are uploaded alongside HTML/CSS/JS.
 
 ## Changelog
-- See [CHANGELOG.md](CHANGELOG.md) for detailed changes.
+- See (CHANGELOG.md) for detailed changes.
