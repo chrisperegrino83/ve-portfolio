@@ -1,4 +1,4 @@
-const VERSION = '1.1.0';
+const VERSION = '1.2.0';
 const vEl = document.getElementById('siteVersion');
 if (vEl) vEl.textContent = 'v' + VERSION;
 
@@ -183,4 +183,5 @@ if (bgButton) {
 // - Search/filter by keywords across sections
 // - Animated progress bars or charts for skills
 // - Form to collect feedback or contact info
+
 
